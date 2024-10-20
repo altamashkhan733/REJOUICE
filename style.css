@@ -1,0 +1,288 @@
+@font-face {
+    font-family: nb;
+    src: url(./NBInternationalProBoo.ttf);
+}
+@font-face{
+    font-family: rejouice;
+    src: url(./Rejouice-Headline.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "nb";
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#page1 {
+    height: 100vh; /* Percentage % parents py depend hote hain but vh nhi hota vh child py km kr jate hain , prnt ko dogy tbhi child py apply kr skty ho*/
+    width: 100%;
+    background-color:#dadada;
+    position: relative;
+}
+#cursor {
+    height: 7.5vw;
+    width: 7.5vw;
+    background-color:#FF5F38;
+    border-radius: 50%;
+    z-index: 9;
+    position: fixed;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transform: translate(-50%,-50%);
+}
+#cursor h5{
+    font-size: 1.15vw;
+    font-weight: 500;
+}
+
+#page1 video { /* Video ko page py set krdia acurate tareky se, taki page py video axa dekhy*/ 
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Objct-fit ki hlp se video axy se adjust ho k bina kise trha ki space left kr k screen py chlti hai*/
+    position: absolute; /* absolute position deny se video content waly div k agy a gae hai or content wala div usky pichy */
+}
+
+#page1-content {
+    height: 100%;
+    width: 100%;
+   /* background-color: black;*/
+    position: relative;
+    z-index: 2; /* Essy video pichy chla gaya */
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Flex direction colmn krny se nav or rejouice wala h1 upr nichy line by line colmn my divide ho jngy*/
+    justify-content: space-between;
+}
+nav{
+    /*height: 100px;
+    width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /*background-color: red;*/
+    padding: 3vw 3vw;
+    font-weight: 70;
+    
+}
+nav h3{
+    font-size: 1.4 vw;
+    font-weight: 90;
+    
+}
+nav h4 {
+    font-size: 1.4vw;
+    
+}
+#page1-content h1 {
+    font-family: rejouice;
+    font-size: 25vw;
+    font-weight: 100;
+    line-height: 27vw;
+}
+#page1-content h1 span{
+    display: inline-block;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 5vw 2.8vw;
+/*    background-color:thistle; */
+}
+
+#page2-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 1.2vw;
+    margin-bottom: 1vw;
+    border-bottom: 1px solid black;
+}
+
+#prgh  {
+    height: 100vh;
+    width: 100%;
+    font-size: 5vw;
+    font-weight: 100;
+    text-align: center;
+    font-family: rejouice;
+
+}
+
+.elem{
+    overflow: hidden;
+}
+.elem h3{
+    font-size: 4.2vw;
+    font-weight: 500;
+}
+
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 3vw;
+}
+#page3-top {
+    /*background-color: red; */
+    text-align: center;
+}
+
+#page3-top h4 {
+    margin-bottom: 1vw;
+    font-size: 1vw;
+    font-weight: 500;
+}
+#page3-top h4 span {
+    font-size: 0.7vw;
+    background-color: black;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 8px;
+}
+
+#page3-top h2{
+    font-size: 4vw;
+    font-weight: 500;
+}
+
+#page3-elem{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 8vw;
+    justify-content: space-between;
+ /*   background-color: red; */
+}
+#page3-elem .box {
+    height: 100%;
+    width: 32.5%;
+    background-color: blue;
+    position: relative;
+}
+
+#page3-elem .box video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Video ko box my es trha se fit in kr skty hain using object-fit:cover */
+    object-position: center; /* Essy video box k center my kr skty hain */
+}
+
+#page3-elem .box img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all linear 1s;
+}
+#page3-elem .box:hover img{
+    opacity: 0;
+}
+
+#page4 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 3vw;
+   /* background-color: black;*/
+}
+
+#page4 span {
+    font-size: 1vw;
+    border-bottom: 1px solid black;
+}
+#page4  #prg{
+    font-size: 3vw;
+    font-weight: 550;
+    padding-top: 1vw;
+    margin-left: 2vw;
+    font-family: rejouice;
+}
+#page4 video{
+    height: 100vh;
+    width: 50%;
+    margin-left: 25%;
+}
+#page4 svg{
+    position: absolute;
+    height: 40%;
+    align-items: center;
+    padding-right: 10vw;
+    margin-right: 40vw;
+}
+
+#page5 {
+    height: 50vh;
+    width: 100%;
+    padding: 5vh 0;
+    position: relative;
+}
+#page5 h1 {
+    font-size: 10vw;
+    font-family: rejouice;
+    font-weight: 50;
+    padding-left: 2vw;
+    border-bottom: 1px solid black;
+}
+#swiperdiv {
+    height: 70vh;
+    width: 100%;
+  /*  background-color: red;*/
+    position: relative;
+    /*margin-top: -1%;*/
+}
+    .swiper {
+        width: 120%;
+        height: 100%;
+      }
+  
+      .swiper-slide {
+        width: 400px;  
+        text-align: center;
+        font-size: 18px;
+        /*background: rgb(255, 255, 255);*/
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        padding-bottom: 20vh;
+      }
+  
+      .swiper-slide img {
+        display: block;
+        width: 20%;
+      /*  height: 100%; */
+        object-fit: cover;
+      }
+      .swiper {
+          margin-right: auto;
+          margin-left: auto;
+      }
+
+#loader {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: black;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFf;
+    gap: 10px;
+
+}       
+
+
+
